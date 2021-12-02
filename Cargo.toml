@@ -1,0 +1,11 @@
+[package]
+name = "challenges-rs"
+version = "0.1.0"
+authors = ["Awiteb <Awiteb@hotmail.com>"]
+
+license = "MIT"
+repository = "https://github.com/TheAwiteb/challenges.rs"
+description = "Challenges I solve from codewars in Rust"
+edition = "2018"
+
+[dependencies]
