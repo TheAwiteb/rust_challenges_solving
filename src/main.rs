@@ -37,6 +37,7 @@ impl Challenge {
             .to_str()
             .unwrap()
             .to_string()
+            
     }
 
     fn name(&self) -> String {
@@ -45,6 +46,18 @@ impl Challenge {
             .strip_suffix(".rs")
             .unwrap()
             .to_string()
+    }
+}
+
+trait Capitalize {
+    fn capitalize(&self) -> String;
+}
+
+impl Capitalize for str {
+    fn capitalize(&self) -> String { 
+        let mut chars: Vec<char> = self.chars().collect();
+        chars[0] = chars[0].to_ascii_uppercase();
+        chars.into_iter().collect()
     }
 }
 
@@ -76,7 +89,7 @@ fn main() {
             "\n🛡🛡🛡🛡🛡🛡🛡  {} 🛡🛡🛡🛡🛡🛡🛡\n\nChallenge file 📁: {}\nChallenge name 🎯: {}\nCodeWars url   🔗: {}",
             challenge_num + 1,
             challenge.file.as_os_str().to_str().unwrap(),
-            challenge.name(),
+            challenge.name().capitalize(),
             challenge.url()
         );
     }
