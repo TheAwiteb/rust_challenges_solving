@@ -100,7 +100,7 @@ fn main() {
             CodeWars url   🔗: {}\n\
             ",
             challenge_num + 1,
-            challenge.file.as_os_str().to_str().unwrap(),
+            challenge.file.display(),
             challenge.name().capitalize(),
             challenge.url()
         );
