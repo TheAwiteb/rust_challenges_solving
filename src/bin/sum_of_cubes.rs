@@ -7,7 +7,7 @@ fn main() {
     tests()
 }
 
-fn tests() {    
+fn tests() {
     assert_eq!(sum_cubes(1), 1);
     assert_eq!(sum_cubes(2), 9);
     assert_eq!(sum_cubes(3), 36);

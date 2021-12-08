@@ -15,7 +15,7 @@ fn main() {
         io::stdin()
             .read_line(&mut user_input)
             .expect("read line unsuccessful ❌");
-        let user_input: i64 = match user_input.trim().parse() {
+        let user_input: u32 = match user_input.trim().parse() {
             Ok(num) => num,
             Err(_) => {
                 println!("Buy 👋");
@@ -26,21 +26,19 @@ fn main() {
     }
 }
 
-fn digital_root(n: i64) -> i64 {
-    let mut result: i64 = n;
+fn digital_root(n: u32) -> u32 {
+    let mut result: u32 = n;
     print!("🌟 {}", result);
     loop {
         let str_num: String = result.to_string();
 
         if str_num.len() >= 2 {
             print!(" ➡️  ");
-            result = i64::from(
-                str_num
-                    .chars()
-                    .map(|num| num.to_digit(10).unwrap())
-                    .reduce(|total, num| total + num)
-                    .unwrap(),
-            );
+            result = str_num
+                .chars()
+                .map(|num| num.to_digit(10).unwrap())
+                .reduce(|total, num| total + num)
+                .unwrap();
             print!(
                 "{} = {}",
                 str_num
@@ -61,7 +59,7 @@ fn digital_root(n: i64) -> i64 {
 
 // OR
 
-fn _digital_root(n: i64) -> i64 {
+fn _digital_root(n: u32) -> u32 {
     if n < 10 {
         n
     } else {
@@ -69,16 +67,12 @@ fn _digital_root(n: i64) -> i64 {
             n.to_string()
                 .chars()
                 .map(|c| c.to_digit(10).unwrap())
-                .sum::<u32>() as i64,
+                .sum::<u32>() as u32,
         )
     }
 }
 
-fn main() {
-    tests()
-}
-
-fn tests() {
+fn _tests() {
     assert_eq!(digital_root(16), 7);
     assert_eq!(digital_root(132189), 6);
 }

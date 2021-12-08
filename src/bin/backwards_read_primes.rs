@@ -29,7 +29,6 @@ fn backwards_prime(start: u64, stop: u64) -> Vec<u64> {
 
 // OR
 
-
 fn _is_prime(num: u64) -> bool {
     (2..(num as f64).sqrt() as u64 + 1).all(|n| num % n != 0)
 }

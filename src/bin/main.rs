@@ -75,25 +75,23 @@ fn get_challenges(challenges_dir: impl AsRef<Path>) -> Vec<Challenge> {
         .filter_map(|entry| {
             let entry = entry.expect("unable to get entry");
             if entry.file_name() != "main.rs" {
-                Some(entry.path())
+                Some(Challenge::new(entry.path()))
             } else {
                 None
             }
         })
-        // we can also put this in the previous `filter_map` if we want to
-        .map(|file_path| Challenge::new(file_path))
         .collect()
 }
 
 fn main() {
-    let challenges: Vec<Challenge> = get_challenges("./src");
+    let challenges: Vec<Challenge> = get_challenges("./src/bin/");
 
     println!("Total challenges: {}", challenges.len());
 
     for (challenge_num, challenge) in challenges.iter().enumerate() {
         println!(
             "\
-            🛡🛡🛡🛡🛡🛡🛡  {} 🛡🛡🛡🛡🛡🛡🛡\n\n\
+            🛡🛡🛡🛡🛡🛡🛡 {} 🛡🛡🛡🛡🛡🛡🛡\n\n\
 
             Challenge file 📁: {}\n\
             Challenge name 🎯: {}\n\
