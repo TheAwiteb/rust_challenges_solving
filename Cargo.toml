@@ -8,4 +8,6 @@ repository = "https://github.com/TheAwiteb/challenges.rs"
 description = "Challenges I solve from codewars in Rust"
 edition = "2018"
 
+default-run = "main"
+
 [dependencies]
