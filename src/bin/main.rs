@@ -92,7 +92,6 @@ fn main() {
         println!(
             "\
             🛡🛡🛡🛡🛡🛡🛡 {} 🛡🛡🛡🛡🛡🛡🛡\n\n\
-
             Challenge file 📁: {}\n\
             Challenge name 🎯: {}\n\
             CodeWars url   🔗: {}\n\
