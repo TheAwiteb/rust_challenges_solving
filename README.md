@@ -1,6 +1,6 @@
 # Challenges.rs
 
-Challenges I solve from [CodeWars](CodeWars.com) in [Rust](https://www.rust-lang.org/)
+Challenges I solve from [CodeWars](https://CodeWars.com) in [Rust](https://www.rust-lang.org/)
 
 ## Requirements
 * [Rust](https://www.rust-lang.org/tools/install)
