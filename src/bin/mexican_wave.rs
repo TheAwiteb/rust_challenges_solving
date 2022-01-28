@@ -36,9 +36,9 @@ fn wave(sentence: &str) -> Vec<String> {
             } else {
                 Some(format!(
                     "{}{}{}",
-                    &sentence[..idx],                       // Before uppercase letter.
+                    &sentence[..idx], // Before uppercase letter.
                     &sentence[idx..idx + 1].to_uppercase(), // The uppercase letter.
-                    &sentence[idx + 1..]                    // After uppercase letter.
+                    &sentence[idx + 1..]  // After uppercase letter.
                 ))
             }
         })
