@@ -1,5 +1,6 @@
 // https://www.codewars.com/kata/559536379512a64472000053/rust/
 
+#[allow(dead_code)]
 fn play_pass(text: &str, shift: u32) -> String {
     let mut chars_arr = text
         .chars()
