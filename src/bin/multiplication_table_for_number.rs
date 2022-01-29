@@ -1,5 +1,44 @@
 // https://www.codewars.com/kata/5a2fd38b55519ed98f0000ce/rust
 
+// +---------------------------------------------------------------------------------+
+// |                         Multiplication table for number                         |
+// +----------------------------------------+----------------------------------------+
+// |                  Rank                  |                  8 kyu                 |
+// +----------------------------------------+----------------------------------------+
+// |                  Tags                  | Fundamentals, Strings, Data Types, Bas |
+// |                                        |          ic Language Features          |
+// +----------------------------------------+----------------------------------------+
+// | Your goal is to return multiplication table for ```number``` that is always an  |
+// | integer from 1 to 10.                                                           |
+// |                                                                                 |
+// | For example, a multiplication table (string) for ```number == 5``` looks like b |
+// | elow:                                                                           |
+// |                                                                                 |
+// | ```                                                                             |
+// | 1 * 5 = 5                                                                       |
+// | 2 * 5 = 10                                                                      |
+// | 3 * 5 = 15                                                                      |
+// | 4 * 5 = 20                                                                      |
+// | 5 * 5 = 25                                                                      |
+// | 6 * 5 = 30                                                                      |
+// | 7 * 5 = 35                                                                      |
+// | 8 * 5 = 40                                                                      |
+// | 9 * 5 = 45                                                                      |
+// | 10 * 5 = 50                                                                     |
+// | ```                                                                             |
+// |                                                                                 |
+// | ```if-not:powershell                                                            |
+// | P. S. You can use ```\n``` in string to jump to the next line.                  |
+// | ```                                                                             |
+// |                                                                                 |
+// | ```if:powershell                                                                |
+// | P. S. You can use ``` `n ``` in string to jump to the next line.                |
+// | ```                                                                             |
+// |                                                                                 |
+// | Note: newlines should be added between rows, but there should be no trailing ne |
+// | wline at the end. If you're unsure about the format, look at the sample tests.  |
+// +---------------------------------------------------------------------------------+
+
 fn multi_table(number: u64) -> String {
     (1..=10)
         .map(|num| format!("{} * {} = {}", num, number, num * number))
